@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure--^0&0+^u@f#g_-zm(24d-t0b9r(708suvxr#f60n)1lfnr-$jc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 from django.contrib.auth import get_user_model
 
