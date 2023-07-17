@@ -22,12 +22,9 @@ class LoginView(APIView):
         email = request.data.get('email')
         password = request.data.get('password')
 
-        for user in CustomUser.objects.all():
-            print(user.email, user.password)
-        # user.delete()
         user = CustomUser.objects.filter(email=email).first()
 
-        if user and check_password("1a2b3c12", user.password):
+        if user and check_password(password, user.password):
             refresh = RefreshToken.for_user(user)
             return Response(
                 {'access_token': str(refresh.access_token)},

@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+from django.contrib.auth import get_user_model
 
 # Application definition
 
@@ -40,6 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'authentication.apps.AuthenticationConfig',
+    'product.apps.ProductConfig',
+    'purchase.apps.PurchaseConfig',
 ]
 
 AUTH_USER_MODEL = 'authentication.CustomUser'

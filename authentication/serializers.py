@@ -13,7 +13,7 @@ class RegistrationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CustomUser
-        fields = ['first_name', 'last_name', 'age', 'email', 'gender', 'role', 'phone', 'password']
+        fields = ['username', 'first_name', 'last_name', 'age', 'email', 'gender', 'role', 'phone', 'password']
 
 
 class ChangePasswordSerializer(serializers.Serializer):
